@@ -1,0 +1,26 @@
+{%extends "base.html"%}
+
+{%block head%}
+    <title>max and min|calculator</title>
+{%endblock%}
+
+{%block content%}
+<div class="container text-center p-3 mb-2 bg-success text-dark" style="margin-top: 8rem;">
+    <form method = "POST">
+        {% csrf_token %}
+        <div class="mar" style="margin-bottom:2rem ;">
+            {{form.number1.label}}
+            {{ form.number1 }}<br/>
+        </div>
+        <div class="mar" style="margin-bottom:2rem ;">
+            {{form.number2.label}}
+            {{ form.number2 }}<br/>
+        </div>
+        <div class="mar" style="margin-bottom:2rem ;">
+            {{form.number3.label}}
+            {{ form.number3 }}<br/>
+        </div>
+        <input class="btn btn-primary"style="margin-left:4rem ;" type="submit" value="Submit">
+    </form>
+</div>
+{%endblock%}
